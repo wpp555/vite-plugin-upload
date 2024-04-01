@@ -1,0 +1,39 @@
+{
+  "name": "@wpp555/vite-plugin-upload",
+  "version": "0.0.1",
+  "author": "wpp555",
+  "description": "Upload the production files bundled in the project to Tencent CSS, except for html",
+  "homepage": "https://github.com/wpp555/vite-plugin-upload",
+  "repository": "https://github.com/wpp555/vite-plugin-upload",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "keywords": [
+    "vite-plugin",
+    "tencent-oss",
+    "tencent-cos",
+    "tencent",
+    "腾讯云",
+    "腾讯云对象存储"
+  ],
+  "dependencies": {
+    "await-to-js": "^3.0.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "cos-nodejs-sdk-v5": "^2.13.3",
+    "glob": "^10.3.10",
+    "picocolors": "^1.0.0"
+  },
+  "peerDependencies": {
+    "vite": "^2"
+  },
+  "publishConfig": {
+    "@wpp555:registry": "https://npm.pkg.github.com"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "example:build": "pnpm -C example build",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  }
+}
