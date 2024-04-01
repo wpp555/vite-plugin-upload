@@ -1,0 +1,58 @@
+{
+    "name": "@wpp555/vite-plugin-upload",
+    "version": "0.0.1",
+    "description": "基于vite的，上传资源到阿里云、腾讯云、minio等存储服务",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org",
+        "access": "public"
+    },
+    "main": "lib/index.js",
+    "module": "lib/index.esm.js",
+    "typings": "lib/index.d.ts",
+    "scripts": {
+        "start": "rollup -w -c",
+        "build": "rimraf lib && rollup -c",
+        "prepublish": "npm run build",
+        "lint": "eslint --fix --ext .js,.ts ./src"
+    },
+    "keywords": [
+        "rollup-plugin",
+        "vite-plugin"
+    ],
+    "files": [
+        "lib",
+        "LICENSE",
+        "CHANGELOG.md",
+        "README.md"
+    ],
+    "repository": "https://github.com/wpp555/vite-plugin-upload",
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "7.17.5",
+        "@babel/plugin-transform-runtime": "7.17.0",
+        "@babel/preset-env": "7.16.4",
+        "@babel/runtime-corejs3": "7.16.3",
+        "@easyfe/eslint-config-ts": "latest",
+        "@rollup/plugin-babel": "5.3.0",
+        "@rollup/plugin-commonjs": "21.0.2",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "15.2.1",
+        "@rollup/plugin-terser": "^0.4.3",
+        "@rollup/plugin-typescript": "^11.1.3",
+        "@types/ali-oss": "^6.16.8",
+        "@types/glob": "7.2.0",
+        "@types/node": "^20.5.9",
+        "rimraf": "^5.0.1",
+        "rollup": "2.79.1",
+        "typescript": "4.5.2",
+        "vite": "2.8.6"
+    },
+    "dependencies": {
+        "ali-oss": "^6.18.1",
+        "cos-nodejs-sdk-v5": "^2.11.6",
+        "esdk-obs-nodejs": "^3.23.11",
+        "glob": "7.2.0",
+        "minio": "^7.0.32"
+    }
+}
